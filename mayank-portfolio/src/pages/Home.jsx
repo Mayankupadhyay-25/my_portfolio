@@ -174,7 +174,7 @@ export default function Home() {
                 display: 'flex', alignItems: 'center', gap: '0.5rem',
               }}
             >
-              <span style={{ color: 'var(--accent)' }}>⚡</span> 3+ Yrs Experience
+              <span style={{ color: 'var(--accent)' }}>⚡</span> Internship Experience
             </motion.div>
           </motion.div>
         </div>
