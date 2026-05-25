@@ -130,7 +130,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="hero-photo-wrap"
-            style={{ flexShrink: 0, position: 'relative' }}
+            style={{ flexShrink: 0, position: 'relative', paddingTop: '32px', paddingBottom: '32px', paddingLeft: '32px' }}
           >
             <div style={{
               width: '340px', height: '400px',
@@ -145,32 +145,33 @@ export default function Home() {
                 alt="Mayank Upadhyay"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
               />
-
             </div>
-            {/* floating badge */}
+            {/* floating badge - bottom left */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               style={{
-                position: 'absolute', bottom: '-16px', left: '-20px',
+                position: 'absolute', bottom: '4px', left: '0',
                 background: 'var(--accent)', color: '#000',
                 padding: '0.6rem 1rem', borderRadius: '6px',
                 fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '0.8rem',
                 boxShadow: '0 8px 24px rgba(240,192,64,0.4)',
+                whiteSpace: 'nowrap',
               }}
             >
               Open to Work ✓
             </motion.div>
-            {/* stats pill */}
+            {/* stats pill - top left */}
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
               style={{
-                position: 'absolute', top: '-16px', left: '-24px',
+                position: 'absolute', top: '4px', left: '0',
                 background: 'var(--surface)', border: '1px solid var(--border)',
                 padding: '0.6rem 1rem', borderRadius: '6px',
                 fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.8rem',
                 display: 'flex', alignItems: 'center', gap: '0.5rem',
+                whiteSpace: 'nowrap',
               }}
             >
               <span style={{ color: 'var(--accent)' }}>⚡</span> Internships + Hackathons
@@ -183,23 +184,24 @@ export default function Home() {
             .hero-inner {
               flex-direction: column !important;
               align-items: flex-start !important;
-              gap: 2.5rem !important;
+              gap: 5rem !important;
             }
             .hero-photo-wrap {
               width: 100% !important;
               display: flex !important;
               justify-content: center !important;
-              margin-top: 1rem !important;
+              padding-left: 32px !important;
+              padding-right: 32px !important;
             }
-            .hero-photo-wrap > div {
+            .hero-photo-wrap > div:first-child {
               width: 220px !important;
               height: 260px !important;
             }
           }
           @media (max-width: 480px) {
-            .hero-photo-wrap > div {
-              width: 180px !important;
-              height: 220px !important;
+            .hero-photo-wrap > div:first-child {
+              width: 190px !important;
+              height: 230px !important;
             }
           }
         `}</style>
@@ -253,14 +255,14 @@ export default function Home() {
               github: 'https://github.com/Mayankupadhyay-25/-Team-Task-Manager-Frontend.git',
             },
             {
-              name: 'LMS Platform', category: 'Full-Stack', type: 'Learning Management System', emoji: '📚', color: '#60a5fa', year: '2024',
+              name: 'LMS Platform', category: 'Frontend', type: 'Learning Management System', emoji: '📚', color: '#60a5fa', year: '2025',
               desc: 'A React-based Learning Management System enabling course upload, student enrollment, and online learning with secure authentication and Clerk integration.',
               tags: ['React.js', 'Clerk Auth', 'Tailwind CSS'],
               live: 'https://lms-zeta-teal.vercel.app/',
               github: 'https://github.com/Mayankupadhyay-25/LMS.git',
             },
             {
-              name: 'CarRental', category: 'Full-Stack', type: 'MERN Stack Application', emoji: '🚗', color: '#f0c040', year: '2024',
+              name: 'CarRental', category: 'Full-Stack', type: 'MERN Stack Application', emoji: '🚗', color: '#f0c040', year: '2026',
               desc: 'A full-stack car rental platform built on the MERN stack with secure JWT authentication, real-time car listings, and an intuitive booking system.',
               tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT Auth', 'Image Kit'],
               live: 'https://car-rentalfrontend-liart.vercel.app/',
