@@ -14,6 +14,7 @@ const projects = [
     longDesc: 'Implemented a comprehensive admin dashboard for inventory management, booking oversight, and Image Kit integration for optimized media delivery. The system supports user authentication, car browsing, and complete booking lifecycle management.',
     tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT Auth', 'Image Kit'],
     github: 'https://github.com/Mayankupadhyay-25/CarRental.git',
+    live: 'https://car-rental-project-mu.vercel.app/',
     highlights: ['JWT Authentication', 'Booking System', 'Admin Dashboard', 'Image Kit'],
   },
   {
@@ -27,6 +28,7 @@ const projects = [
     longDesc: 'Developed complete course management with upload capabilities, student enrollment flow, and integrated Clerk\'s ready-made Sign-In, Sign-Up, and Profile UI components for a seamless authentication experience.',
     tags: ['React.js', 'Clerk Auth', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     github: 'https://github.com/Mayankupadhyay-25/LMS.git',
+    live: 'https://lms-1oxyifuwm-mayank-upadhyays-projects-b3cc7232.vercel.app/',
     highlights: ['Course Management', 'Clerk Auth Integration', 'Enrollment System', 'Video Learning'],
   },
   {
@@ -40,6 +42,7 @@ const projects = [
     longDesc: 'Built with HTML, Tailwind CSS, and React, GrosMart delivers smooth navigation, full responsiveness, and an optimized shopping flow. Focused on clean visual hierarchy and fast page performance.',
     tags: ['React.js', 'Tailwind CSS', 'HTML', 'Responsive Design'],
     github: 'https://github.com/Mayankupadhyay-25/GrosMart.git',
+    live: 'https://gros-mart-c6yjd9dn9-mayank-upadhyays-projects-b3cc7232.vercel.app/',
     highlights: ['Responsive Design', 'Product Catalog', 'Cart System', 'Clean UI'],
   },
   {
@@ -93,6 +96,34 @@ const projects = [
     tags: ['Figma', 'Civic Tech', 'UI Design', 'Data Dashboards'],
     github: 'https://www.figma.com/design/LPfNuyxfptvTnyunlHJI5H/Sudhar-%E2%80%93-Data-Dashboard?node-id=0-1&p=f&t=uT2SHsEdw1hFBpeL-0',
     highlights: ['Civic Technology', 'Progress Tracking', 'Community Tools', 'Sustainability'],
+  },
+  {
+    name: 'Coffee Website',
+    category: 'Frontend',
+    type: 'Brand Website',
+    emoji: '☕',
+    color: '#c8834a',
+    year: '2025',
+    desc: 'A visually rich coffee brand website with smooth UI, product showcase, and an immersive browsing experience built for modern web aesthetics.',
+    longDesc: 'Designed and developed a responsive coffee brand website focusing on elegant typography, warm color palettes, and smooth scroll interactions. Features product listings, brand story section, and a fully responsive layout across all devices.',
+    tags: ['React.js', 'CSS', 'Responsive Design', 'UI/UX'],
+    live: 'https://vercel.com/mayank-upadhyays-projects-b3cc7232/coffee-website',
+    github: 'https://github.com/Mayankupadhyay-25',
+    highlights: ['Brand Design', 'Product Showcase', 'Responsive Layout', 'Smooth UI'],
+  },
+  {
+    name: 'Task Manager',
+    category: 'Full-Stack',
+    type: 'Team Productivity App',
+    emoji: '✅',
+    color: '#a78bfa',
+    year: '2025',
+    desc: 'A full-stack team task manager with role-based access, real-time task assignments, status tracking, and a clean dashboard for productivity management.',
+    longDesc: 'Built a complete backend-heavy task management system supporting team collaboration with role-based permissions (admin/member), task creation, assignment, priority levels, and status updates. Features a secure login system and a clean React frontend.',
+    tags: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'JWT Auth'],
+    live: 'https://team-task-manager-frontend-di9ocud6r.vercel.app/login',
+    github: 'https://github.com/Mayankupadhyay-25',
+    highlights: ['Role-Based Access', 'Task Assignment', 'Status Tracking', 'Team Dashboard'],
   },
 ]
 
@@ -227,7 +258,7 @@ export default function Projects() {
                       {expanded === p.name ? '↑ Show Less' : '↓ View Details'}
                     </button>
                     <a
-                      href={p.github}
+                      href={p.live || p.github}
                       target="_blank" rel="noopener noreferrer"
                       onClick={e => e.stopPropagation()}
                       style={{
@@ -241,7 +272,7 @@ export default function Projects() {
                       onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
                       onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
                     >
-                      {p.github.includes('figma') ? 'Figma ↗' : 'GitHub ↗'}
+                      {p.live ? 'Live ↗' : p.github.includes('figma') ? 'Figma ↗' : 'GitHub ↗'}
                     </a>
                   </div>
                 </div>
