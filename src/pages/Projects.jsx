@@ -14,21 +14,21 @@ const projects = [
     longDesc: 'Implemented a comprehensive admin dashboard for inventory management, booking oversight, and Image Kit integration for optimized media delivery. The system supports user authentication, car browsing, and complete booking lifecycle management.',
     tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT Auth', 'Image Kit'],
     github: 'https://github.com/Mayankupadhyay-25/CarRental.git',
-    live: 'https://car-rental-project-mu.vercel.app/',
+    live: 'https://car-rentalfrontend-liart.vercel.app/',
     highlights: ['JWT Authentication', 'Booking System', 'Admin Dashboard', 'Image Kit'],
   },
   {
     name: 'LMS Platform',
-    category: 'Full-Stack',
+    category: 'Frontend',
     type: 'Learning Management System',
     emoji: '📚',
     color: '#60a5fa',
     year: '2024',
     desc: 'A React-based Learning Management System enabling course upload, student enrollment, and online learning with secure authentication and Clerk integration.',
     longDesc: 'Developed complete course management with upload capabilities, student enrollment flow, and integrated Clerk\'s ready-made Sign-In, Sign-Up, and Profile UI components for a seamless authentication experience.',
-    tags: ['React.js', 'Clerk Auth', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    tags: ['React.js', 'Clerk Auth', 'Tailwind CSS'],
     github: 'https://github.com/Mayankupadhyay-25/LMS.git',
-    live: 'https://lms-1oxyifuwm-mayank-upadhyays-projects-b3cc7232.vercel.app/',
+    live: 'https://lms-zeta-teal.vercel.app/',
     highlights: ['Course Management', 'Clerk Auth Integration', 'Enrollment System', 'Video Learning'],
   },
   {
@@ -42,12 +42,12 @@ const projects = [
     longDesc: 'Built with HTML, Tailwind CSS, and React, GrosMart delivers smooth navigation, full responsiveness, and an optimized shopping flow. Focused on clean visual hierarchy and fast page performance.',
     tags: ['React.js', 'Tailwind CSS', 'HTML', 'Responsive Design'],
     github: 'https://github.com/Mayankupadhyay-25/GrosMart.git',
-    live: 'https://gros-mart-c6yjd9dn9-mayank-upadhyays-projects-b3cc7232.vercel.app/',
+    live: 'https://gros-mart.vercel.app/',
     highlights: ['Responsive Design', 'Product Catalog', 'Cart System', 'Clean UI'],
   },
   {
     name: 'Dayitva',
-    category: 'UI/UX + Dev',
+    category: 'UI/UX',
     type: 'Travel Website',
     emoji: '✈️',
     color: '#f472b6',
@@ -55,7 +55,7 @@ const projects = [
     desc: 'A travel website designed from scratch in Figma and developed with Next.js, featuring smooth navigation, destination search, and a mobile-first responsive layout.',
     longDesc: 'The project began with a full Figma design process — user flows, wireframes, and high-fidelity mockups — then transitioned to a pixel-perfect Next.js implementation. Features destination search, smooth page transitions, and rich visual storytelling.',
     tags: ['Next.js', 'Figma', 'UI/UX Design', 'Mobile-First'],
-    github: 'https://www.figma.com/design/WsWj0wWCSeWOQsJwvslVfj/Daitvya?node-id=5-2&p=f&t=1ZkgQTJTntmfRHj3-0',
+    figma: 'https://www.figma.com/design/WsWj0wWCSeWOQsJwvslVfj/Daitvya?node-id=5-2&p=f&t=jZ8EoAtVOUfOLa0a-0',
     highlights: ['Figma Design', 'Destination Search', 'Mobile-First', 'Next.js Dev'],
   },
   {
@@ -68,21 +68,21 @@ const projects = [
     desc: 'A calming personal finance app designed to help users achieve a more serene financial life. Focuses on clarity, simplicity, and peace of mind.',
     longDesc: 'Designed with a focus on reducing financial anxiety through clean data visualization, clear spending breakdowns, and calm, approachable UI. Prioritizes user well-being alongside functionality.',
     tags: ['Figma', 'UI Design', 'UX Research', 'Data Visualization'],
-    github: 'https://github.com/Mayankupadhyay-25',
+    figma: 'https://www.figma.com/design/lW07UaLBqGoCLLwTPSIKTt/Personal-Finance-assessment?node-id=0-1&p=f&t=SoOaPpyn8HFLwKA4-0',
     highlights: ['UI/UX Design', 'Budget Tracking', 'Data Visualization', 'Calm UX'],
   },
   {
     name: 'School Website',
-    category: 'UI/UX + Dev',
+    category: 'UI/UX ',
     type: 'Information Platform',
     emoji: '🏫',
     color: '#fb923c',
     year: '2024',
     desc: 'A modern, responsive school website designed in Figma with clean layout, intuitive navigation, and easy access to academic resources and announcements.',
     longDesc: 'Provides students, parents, and staff with easy access to admission info, announcements, contact details, and academic resources. Designed with accessibility and clarity as primary goals, then developed as a responsive frontend.',
-    tags: ['Figma', 'Next.js', 'Responsive Design', 'Accessibility'],
-    github: 'https://github.com/Mayankupadhyay-25',
-    highlights: ['Figma Design', 'Information Architecture', 'Responsive', 'Next.js'],
+    tags: ['Figma', 'UI Design', 'UX Research', 'Data Visualization'],
+    figma: 'https://www.figma.com/design/f4uvWxOoNJB2bv4HKwCBPy/school-admission-site-project?node-id=0-1&t=s7B6ecqO81I70Z0I-1',
+    highlights: ['Figma Design', 'Information Architecture', 'Responsive'],
   },
   {
     name: 'Sudhar',
@@ -94,7 +94,7 @@ const projects = [
     desc: 'A sustainability platform ensuring accountability and tracking progress across the nation. Built to empower transparent governance and community action.',
     longDesc: 'Sudhar is a civic-tech platform designed to connect citizens with accountability tools for tracking sustainability goals at a national scale. The platform features reporting mechanisms, progress dashboards, and community engagement tools.',
     tags: ['Figma', 'Civic Tech', 'UI Design', 'Data Dashboards'],
-    github: 'https://www.figma.com/design/LPfNuyxfptvTnyunlHJI5H/Sudhar-%E2%80%93-Data-Dashboard?node-id=0-1&p=f&t=uT2SHsEdw1hFBpeL-0',
+    figma: 'https://www.figma.com/design/LPfNuyxfptvTnyunlHJI5H/Sudhar-%E2%80%93-Data-Dashboard?node-id=0-1&p=f&t=d2E37JIlOAKeKHef-0',
     highlights: ['Civic Technology', 'Progress Tracking', 'Community Tools', 'Sustainability'],
   },
   {
@@ -106,9 +106,9 @@ const projects = [
     year: '2025',
     desc: 'A visually rich coffee brand website with smooth UI, product showcase, and an immersive browsing experience built for modern web aesthetics.',
     longDesc: 'Designed and developed a responsive coffee brand website focusing on elegant typography, warm color palettes, and smooth scroll interactions. Features product listings, brand story section, and a fully responsive layout across all devices.',
-    tags: ['React.js', 'CSS', 'Responsive Design', 'UI/UX'],
-    live: 'https://vercel.com/mayank-upadhyays-projects-b3cc7232/coffee-website',
-    github: 'https://github.com/Mayankupadhyay-25',
+    tags: ['Javascript', 'CSS', 'Responsive Design', 'UI/UX'],
+    live: 'https://coffee-website-rosy-ten.vercel.app/',
+    github: 'https://github.com/Mayankupadhyay-25/Coffee-Website.git',
     highlights: ['Brand Design', 'Product Showcase', 'Responsive Layout', 'Smooth UI'],
   },
   {
@@ -121,13 +121,13 @@ const projects = [
     desc: 'A full-stack team task manager with role-based access, real-time task assignments, status tracking, and a clean dashboard for productivity management.',
     longDesc: 'Built a complete backend-heavy task management system supporting team collaboration with role-based permissions (admin/member), task creation, assignment, priority levels, and status updates. Features a secure login system and a clean React frontend.',
     tags: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'JWT Auth'],
-    live: 'https://team-task-manager-frontend-di9ocud6r.vercel.app/login',
-    github: 'https://github.com/Mayankupadhyay-25',
+    live: 'https://team-task-manager-frontend-mu.vercel.app/login',
+    github: 'https://github.com/Mayankupadhyay-25/-Team-Task-Manager-Frontend.git',
     highlights: ['Role-Based Access', 'Task Assignment', 'Status Tracking', 'Team Dashboard'],
   },
 ]
 
-const categories = ['All', 'Full-Stack', 'Frontend', 'UI/UX + Dev', 'UI/UX']
+const categories = ['All', 'Full-Stack', 'Frontend', 'UI/UX']
 
 export default function Projects() {
   const [active, setActive] = useState('All')
@@ -257,23 +257,29 @@ export default function Projects() {
                     }}>
                       {expanded === p.name ? '↑ Show Less' : '↓ View Details'}
                     </button>
-                    <a
-                      href={p.live || p.github}
-                      target="_blank" rel="noopener noreferrer"
-                      onClick={e => e.stopPropagation()}
-                      style={{
-                        padding: '0.4rem 1rem',
-                        background: 'var(--surface)', border: '1px solid var(--border)',
-                        borderRadius: '4px', fontSize: '0.75rem',
-                        fontFamily: 'var(--font-display)', fontWeight: 600,
-                        color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.4rem',
-                        transition: 'border-color 0.2s, color 0.2s',
-                      }}
-                      onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
-                    >
-                      {p.live ? 'Live ↗' : p.github.includes('figma') ? 'Figma ↗' : 'GitHub ↗'}
-                    </a>
+                    <div style={{ display: 'flex', gap: '0.5rem' }} onClick={e => e.stopPropagation()}>
+                      {p.live && (
+                        <a href={p.live} target="_blank" rel="noopener noreferrer"
+                          style={{ padding: '0.4rem 1rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--text-muted)', textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s' }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
+                        >Live ↗</a>
+                      )}
+                      {p.github && (
+                        <a href={p.github} target="_blank" rel="noopener noreferrer"
+                          style={{ padding: '0.4rem 1rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--text-muted)', textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s' }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
+                        >GitHub ↗</a>
+                      )}
+                      {p.figma && (
+                        <a href={p.figma} target="_blank" rel="noopener noreferrer"
+                          style={{ padding: '0.4rem 1rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--text-muted)', textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s' }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
+                        >Figma ↗</a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>

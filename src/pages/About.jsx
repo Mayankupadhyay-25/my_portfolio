@@ -120,7 +120,7 @@ export default function About() {
               I'm a passionate Website developer with 3+ years of experience in internships and projects. I enjoy solving real-world problems by designing intuitive user flows and building polished, high-performance interfaces.
             </p>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1.25rem' }}>
-              Currently pursuing B.Tech in Computer Science and Engineering (Data Science) at ABES Institute of Technology, Ghaziabad. I specialize in React.js, Next.js, and modern CSS — bridging the gap between design and development.
+              Currently pursuing B.Tech in Computer Science and Engineering at ABES Institute of Technology, Ghaziabad. I specialize in React.js, Next.js, and modern CSS — bridging the gap between design and development.
             </p>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2.5rem' }}>
               My work focuses on usability, simplicity, and delivering meaningful user experiences that make a real difference. I believe great code and great design go hand in hand.
