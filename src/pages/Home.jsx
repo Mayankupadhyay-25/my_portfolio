@@ -21,7 +21,7 @@ export default function Home() {
       <section style={{
         minHeight: '100vh',
         display: 'flex', alignItems: 'center',
-        padding: '120px 2rem 4rem',
+        padding: 'clamp(100px, 15vw, 140px) 1.25rem 4rem',
         position: 'relative', overflow: 'hidden',
       }}>
         {/* Background decoration */}
@@ -88,7 +88,7 @@ export default function Home() {
               color: 'var(--text-muted)', fontSize: '1.125rem',
               maxWidth: '520px', lineHeight: 1.7, marginBottom: '3rem',
             }}>
-              Building pixel-perfect, scalable web applications with React & Next.js. Currently pursuing B.Tech in CS (Data Science) at ABES Institute of Technology.
+              Building pixel-perfect, scalable web applications with React & Next.js. Currently pursuing B.Tech in Computer Science & Engineering at ABES Institute of Technology.
             </motion.p>
 
             <motion.div variants={fadeUp} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -145,8 +145,7 @@ export default function Home() {
                 alt="Mayank Upadhyay"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
               />
-              {/* accent corner decorations */}
-              <div style={{ position: 'absolute', top: '12px', right: '12px', width: '40px', height: '40px', border: '2px solid var(--accent)', borderRadius: '4px', opacity: 0.6 }} />
+
             </div>
             {/* floating badge */}
             <motion.div
@@ -181,9 +180,27 @@ export default function Home() {
 
         <style>{`
           @media (max-width: 900px) {
-            .hero-inner { flex-direction: column-reverse !important; align-items: flex-start !important; }
-            .hero-photo-wrap { width: 100% !important; display: flex; justify-content: center; }
-            .hero-photo-wrap > div { width: 240px !important; height: 280px !important; }
+            .hero-inner {
+              flex-direction: column !important;
+              align-items: flex-start !important;
+              gap: 2.5rem !important;
+            }
+            .hero-photo-wrap {
+              width: 100% !important;
+              display: flex !important;
+              justify-content: center !important;
+              margin-top: 1rem !important;
+            }
+            .hero-photo-wrap > div {
+              width: 220px !important;
+              height: 260px !important;
+            }
+          }
+          @media (max-width: 480px) {
+            .hero-photo-wrap > div {
+              width: 180px !important;
+              height: 220px !important;
+            }
           }
         `}</style>
       </section>
@@ -209,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* Featured Work Preview */}
-      <section style={{ padding: '6rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+      <section style={{ padding: '5rem 1.25rem', maxWidth: '1200px', margin: '0 auto' }}>
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -226,12 +243,29 @@ export default function Home() {
           </Link>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.5px', background: 'var(--border)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.25rem' }}>
           {[
-            { name: 'CarRental', type: 'MERN Stack', desc: 'Full-stack car rental platform with secure auth, booking system, and admin dashboard.', tags: ['MongoDB', 'Express', 'React', 'Node.js'], emoji: '🚗' },
-            { name: 'Dayitva', type: 'Travel Website', desc: 'Responsive travel website designed in Figma, built with Next.js with smooth destination search.', tags: ['Next.js', 'Figma', 'UI/UX'], emoji: '✈️' },
-            { name: 'Financial Sanctuary', type: 'Personal Finance App', desc: 'A calming personal finance app helping users track and manage their finances.', tags: ['React', 'UI Design', 'Figma'], emoji: '💰' },
-            { name: 'School Website', type: 'Information Platform', desc: 'Modern responsive school website with clean navigation and academic resource access.', tags: ['Next.js', 'Figma', 'Responsive'], emoji: '🏫' },
+            {
+              name: 'Task Manager', category: 'Full-Stack', type: 'Team Productivity App', emoji: '✅', color: '#a78bfa', year: '2025',
+              desc: 'A full-stack team task manager with role-based access, real-time task assignments, status tracking, and a clean dashboard for productivity management.',
+              tags: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'JWT Auth'],
+              live: 'https://team-task-manager-frontend-mu.vercel.app/login',
+              github: 'https://github.com/Mayankupadhyay-25/-Team-Task-Manager-Frontend.git',
+            },
+            {
+              name: 'LMS Platform', category: 'Full-Stack', type: 'Learning Management System', emoji: '📚', color: '#60a5fa', year: '2024',
+              desc: 'A React-based Learning Management System enabling course upload, student enrollment, and online learning with secure authentication and Clerk integration.',
+              tags: ['React.js', 'Clerk Auth', 'Tailwind CSS'],
+              live: 'https://lms-zeta-teal.vercel.app/',
+              github: 'https://github.com/Mayankupadhyay-25/LMS.git',
+            },
+            {
+              name: 'CarRental', category: 'Full-Stack', type: 'MERN Stack Application', emoji: '🚗', color: '#f0c040', year: '2024',
+              desc: 'A full-stack car rental platform built on the MERN stack with secure JWT authentication, real-time car listings, and an intuitive booking system.',
+              tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT Auth', 'Image Kit'],
+              live: 'https://car-rentalfrontend-liart.vercel.app/',
+              github: 'https://github.com/Mayankupadhyay-25/CarRental.git',
+            },
           ].map((p, i) => (
             <motion.div
               key={p.name}
@@ -241,22 +275,51 @@ export default function Home() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -4 }}
               style={{
-                background: 'var(--bg2)', padding: '2.5rem',
-                cursor: 'default', position: 'relative', overflow: 'hidden',
+                background: 'var(--bg2)', border: '1px solid var(--border)',
+                borderRadius: '8px', overflow: 'hidden', transition: 'border-color 0.2s',
               }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = p.color}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--border)'}
             >
-              <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{p.emoji}</div>
-              <p style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.5rem' }}>{p.type}</p>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.75rem' }}>{p.name}</h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>{p.desc}</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                {p.tags.map(t => (
-                  <span key={t} style={{
-                    padding: '0.25rem 0.75rem', background: 'var(--surface)',
-                    border: '1px solid var(--border)', borderRadius: '100px',
-                    fontSize: '0.7rem', color: 'var(--text-muted)', fontFamily: 'var(--font-display)',
-                  }}>{t}</span>
-                ))}
+              {/* Card Top */}
+              <div style={{
+                padding: '1.5rem', height: '140px',
+                background: `linear-gradient(135deg, ${p.color}15, ${p.color}05)`,
+                display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                borderBottom: '1px solid var(--border)',
+              }}>
+                <div style={{ fontSize: '2.25rem' }}>{p.emoji}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
+                  <span style={{ fontSize: '0.65rem', color: p.color, fontFamily: 'var(--font-display)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', padding: '0.2rem 0.6rem', background: `${p.color}20`, borderRadius: '100px' }}>{p.category}</span>
+                  <span style={{ fontSize: '0.65rem', color: 'var(--text-dim)' }}>{p.year}</span>
+                </div>
+              </div>
+              {/* Card Body */}
+              <div style={{ padding: '1.5rem' }}>
+                <p style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>{p.type}</p>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.6rem' }}>{p.name}</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', lineHeight: 1.6, marginBottom: '1rem' }}>{p.desc}</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1rem' }}>
+                  {p.tags.map(t => (
+                    <span key={t} style={{ padding: '0.2rem 0.55rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '100px', fontSize: '0.65rem', color: 'var(--text-muted)', fontFamily: 'var(--font-display)' }}>{t}</span>
+                  ))}
+                </div>
+                <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+                  {p.live && (
+                    <a href={p.live} target="_blank" rel="noopener noreferrer"
+                      style={{ padding: '0.35rem 0.85rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.72rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--text-muted)', textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
+                    >Live ↗</a>
+                  )}
+                  {p.github && (
+                    <a href={p.github} target="_blank" rel="noopener noreferrer"
+                      style={{ padding: '0.35rem 0.85rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.72rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--text-muted)', textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.color = p.color }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)' }}
+                    >GitHub ↗</a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -264,7 +327,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '6rem 2rem', background: 'var(--bg2)', borderTop: '1px solid var(--border)' }}>
+      <section style={{ padding: '5rem 1.25rem', background: 'var(--bg2)', borderTop: '1px solid var(--border)' }}>
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

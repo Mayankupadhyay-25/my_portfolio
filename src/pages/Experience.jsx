@@ -36,7 +36,7 @@ const experiences = [
 
 const education = [
   {
-    degree: 'B.Tech in Computer Science & Engineering (Data Science)',
+    degree: 'B.Tech in Computer Science & Engineering',
     school: 'ABES Institute of Technology',
     university: 'Dr. A.P.J. Abdul Kalam Technical University, UP',
     period: '2022 – 2026',

@@ -29,12 +29,15 @@ const skills = [
 ]
 
 const achievements = [
-  { icon: '🏆', title: 'Smart India Hackathon 2025 Finalist', desc: 'Led a team of 4, resolved 15+ issues, integrated AI-based modules.' },
-  { icon: '✅', title: 'Manual Testing Certified', desc: 'Certified by ABESIT in manual software testing.' },
-  { icon: '⚛️', title: 'React.js Certified', desc: 'Completed React.js training at ABESIT Institute.' },
-  { icon: '🎨', title: 'UI/UX Design Certificate', desc: 'Issued by Indibus Software Solutions Pvt. Ltd.' },
-  { icon: '☕', title: 'Core JAVA Certificate', desc: 'Certified by Softpro India & AICTE.' },
-  { icon: '🩸', title: 'Blood Donation Camp Volunteer', desc: 'Active participation in community welfare initiatives.' },
+  { icon: '🏆', title: 'Smart India Hackathon 2025 Finalist', desc: 'Led a team of 4, resolved 15+ issues, integrated AI-based modules.', link: 'https://drive.google.com/file/d/1Ka97P__Ed29NAgV2FY3CftR6XJQnyCaB/view' },
+  { icon: '✅', title: 'Manual Testing Certified', desc: 'Certified by ABESIT in manual software testing.', link: 'https://drive.google.com/file/d/13PI2CQZKtkx3MSRqJfzV2K_GRzpkzCpf/view' },
+  { icon: '⚛️', title: 'React.js Certified', desc: 'Completed React.js training at ABESIT Institute.', link: 'https://drive.google.com/file/d/1UsZo2goB79rdCV3pA-bjf29I0T5d4w50/view?usp=drive_link' },
+  { icon: '🎨', title: 'UI/UX Design Certificate', desc: 'Issued by Indibus Software Solutions Pvt. Ltd.', link: 'https://drive.google.com/file/d/1LjcLolmysU7qadPlirCeprLMy2l-rL6L/view?usp=drive_link' },
+  { icon: '☕', title: 'Core JAVA Certificate', desc: 'Certified by Softpro India & AICTE.', link: 'https://drive.google.com/file/d/1UuKggeqcL5I1Bj3HOGBDpqyKc3JhXaqy/view' },
+  { icon: '🩸', title: 'Blood Donation Camp Volunteer', desc: 'Active participation in community welfare initiatives.', link: 'https://drive.google.com/file/d/1UyUmjNRwIWWxaUKqS_-6eFYOWL3kD8qc/view?usp=sharing' },
+  { icon: '💻', title: 'Web Dev & Design Certificate — ABESIT', desc: 'Certified in Web Development & Design by ABES Institute of Technology.', link: 'https://drive.google.com/file/d/1gRln5U1VAZoR_hpsC_-SmJ1FR49U79HY/view' },
+  { icon: '🚀', title: 'Hacknovate 7.0 Participation', desc: 'Participated in Hacknovate 7.0 hackathon.', link: 'https://drive.google.com/file/d/1GopTsdg4WuZFDHbUH9RGqLxM90IOqfg9/view' },
+  { icon: '🤖', title: 'AI Summit — ABESIT', desc: 'Attended the AI Summit held at ABES Institute of Technology.', link: 'https://drive.google.com/file/d/1Tsm1tn51OTS_ijVY6_W-fUEd3tCMMFrJ/view' },
 ]
 
 function SkillBar({ name, pct, delay = 0 }) {
@@ -102,8 +105,7 @@ export default function About() {
                 <p style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.25rem' }}>Mayank Upadhyay</p>
                 <p style={{ color: 'var(--accent)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Web Developer & UI Designer</p>
               </div>
-              {/* decorative corner */}
-              <div style={{ position: 'absolute', top: '1rem', right: '1rem', width: '48px', height: '48px', border: '2px solid var(--accent)', borderRadius: '4px', opacity: 0.4 }} />
+
             </div>
           </motion.div>
 
@@ -179,7 +181,7 @@ export default function About() {
           <p style={{ color: 'var(--accent)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.5rem' }}>Recognition</p>
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '3rem' }}>Achievements & Certifications</h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '1rem' }}>
             {achievements.map((a, i) => (
               <motion.div
                 key={a.title}
@@ -187,10 +189,16 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                whileHover={{ borderColor: 'var(--accent)' }}
-                style={{ padding: '1.5rem', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '4px', transition: 'border-color 0.2s' }}
+                whileHover={{ y: -4 }}
+                style={{ padding: '1.5rem', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '4px', transition: 'border-color 0.2s, transform 0.2s', cursor: 'pointer' }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--accent)'}
+                onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--border)'}
+                onClick={() => window.open(a.link, '_blank', 'noopener,noreferrer')}
               >
-                <div style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>{a.icon}</div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
+                  <div style={{ fontSize: '1.75rem' }}>{a.icon}</div>
+                  <span style={{ fontSize: '0.65rem', color: 'var(--accent)', fontFamily: 'var(--font-display)', fontWeight: 600, border: '1px solid var(--accent)', borderRadius: '100px', padding: '0.15rem 0.5rem', opacity: 0.8 }}>View ↗</span>
+                </div>
                 <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.4rem' }}>{a.title}</h4>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.825rem', lineHeight: 1.5 }}>{a.desc}</p>
               </motion.div>
