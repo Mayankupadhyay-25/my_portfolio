@@ -81,7 +81,7 @@ export default function Home() {
               color: 'transparent',
               marginBottom: '2.5rem',
             }}>
-              & UI Designer
+              & Web Designer
             </motion.h1>
 
             <motion.p variants={fadeUp} style={{
