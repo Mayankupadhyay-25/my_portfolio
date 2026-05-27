@@ -88,7 +88,7 @@ export default function Home() {
               color: 'var(--text-muted)', fontSize: '1.125rem',
               maxWidth: '520px', lineHeight: 1.7, marginBottom: '3rem',
             }}>
-              Building pixel-perfect, scalable web applications with React & Next.js. Currently pursuing B.Tech in Computer Science & Engineering at ABES Institute of Technology.
+              Building pixel-perfect, scalable and creatively Designed web applications with React , Next.js & Figma . Currently pursuing B.Tech in Computer Science & Engineering at ABES Institute of Technology.
             </motion.p>
 
             <motion.div variants={fadeUp} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
