@@ -119,7 +119,7 @@ export default function About() {
               A self-taught UI/UX designer<br />turned Web Developer
             </h2>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1.25rem' }}>
-              I'm a passionate Website developer with 3+ years of experience in internships and projects. I enjoy solving real-world problems by designing intuitive user flows and building polished, high-performance interfaces.
+              I'm a passionate Website developer with 1+ years of experience in internships and projects. I enjoy solving real-world problems by designing intuitive user flows and building polished, high-performance interfaces.
             </p>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1.25rem' }}>
               Currently pursuing B.Tech in Computer Science and Engineering at ABES Institute of Technology, Ghaziabad. I specialize in React.js, Next.js, and modern CSS — bridging the gap between design and development.
@@ -132,7 +132,7 @@ export default function About() {
               {[
                 { label: 'Location', value: 'Uttar Pradesh, India' },
                 { label: 'Availability', value: 'Open to Work ✅' },
-                { label: 'Education', value: 'B.Tech CS (DS) 2022–26' },                { label: 'Languages', value: 'English, Hindi' },
+                { label: 'Education', value: 'B.Tech CSE 2022–26' },                { label: 'Languages', value: 'English, Hindi' },
               ].map(i => (
                 <div key={i.label} style={{ padding: '1rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '4px' }}>
                   <p style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-muted)', marginBottom: '0.25rem' }}>{i.label}</p>
