@@ -58,7 +58,7 @@ export default function Home() {
               letterSpacing: '-0.03em',
               marginBottom: '0.25rem',
             }}>
-              Web
+              Softwer
             </motion.h1>
             <motion.h1 variants={fadeUp} style={{
               fontFamily: 'var(--font-display)',
@@ -69,20 +69,9 @@ export default function Home() {
               color: 'var(--accent)',
               marginBottom: '0.25rem',
             }}>
-              Developer
+              Developer 1
             </motion.h1>
-            <motion.h1 variants={fadeUp} style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(3rem, 7vw, 6rem)',
-              fontWeight: 800,
-              lineHeight: 0.95,
-              letterSpacing: '-0.03em',
-              WebkitTextStroke: '1px var(--border)',
-              color: 'transparent',
-              marginBottom: '2.5rem',
-            }}>
-              & Web Designer
-            </motion.h1>
+            
 
             <motion.p variants={fadeUp} style={{
               color: 'var(--text-muted)', fontSize: '1.125rem',
@@ -248,13 +237,6 @@ export default function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.25rem' }}>
           {[
             {
-              name: 'Task Manager', category: 'Full-Stack', type: 'Team Productivity App', emoji: '✅', color: '#a78bfa', year: '2025',
-              desc: 'A full-stack team task manager with role-based access, real-time task assignments, status tracking, and a clean dashboard for productivity management.',
-              tags: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'JWT Auth'],
-              live: 'https://team-task-manager-frontend-mu.vercel.app/login',
-              github: 'https://github.com/Mayankupadhyay-25/-Team-Task-Manager-Frontend.git',
-            },
-            {
               name: 'LMS Platform', category: 'Frontend', type: 'Learning Management System', emoji: '📚', color: '#60a5fa', year: '2025',
               desc: 'A React-based Learning Management System enabling course upload, student enrollment, and online learning with secure authentication and Clerk integration.',
               tags: ['React.js', 'Clerk Auth', 'Tailwind CSS'],
@@ -262,11 +244,21 @@ export default function Home() {
               github: 'https://github.com/Mayankupadhyay-25/LMS.git',
             },
             {
-              name: 'CarRental', category: 'Full-Stack', type: 'MERN Stack Application', emoji: '🚗', color: '#f0c040', year: '2026',
-              desc: 'A full-stack car rental platform built on the MERN stack with secure JWT authentication, real-time car listings, and an intuitive booking system.',
-              tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT Auth', 'Image Kit'],
-              live: 'https://car-rentalfrontend-liart.vercel.app/',
-              github: 'https://github.com/Mayankupadhyay-25/CarRental.git',
+             name: 'GrosMart',category: 'Frontend',type: 'E-Commerce Website',emoji: '🛒',color: '#4ade80', year: '2025',
+             desc: 'A responsive e-commerce website for fresh food, vegetables, and seafood with a clean, user-friendly UI and optimized shopping experience.',
+             longDesc: 'Built with HTML, Tailwind CSS, and React, GrosMart delivers smooth navigation, full responsiveness, and an optimized shopping flow. Focused on clean visual hierarchy and fast page performance.',
+             tags: ['React.js', 'Tailwind CSS', 'HTML', 'Responsive Design'],
+             github: 'https://github.com/Mayankupadhyay-25/GrosMart.git',
+             live: 'https://gros-mart.vercel.app/',
+             highlights: ['Responsive Design', 'Product Catalog', 'Cart System', 'Clean UI'],
+            },
+            {
+             name: 'Dayitva',category: 'UI/UX',type: 'Travel Website',emoji: '✈️',color: '#f472b6',year: '2024',
+             desc: 'A travel website designed from scratch in Figma and developed with Next.js, featuring smooth navigation, destination search, and a mobile-first responsive layout.',
+             longDesc: 'The project began with a full Figma design process — user flows, wireframes, and high-fidelity mockups — then transitioned to a pixel-perfect Next.js implementation. Features destination search, smooth page transitions, and rich visual storytelling.',
+             tags: ['Next.js', 'Figma', 'UI/UX Design', 'Mobile-First'],
+             figma: 'https://www.figma.com/design/WsWj0wWCSeWOQsJwvslVfj/Daitvya?node-id=5-2&p=f&t=jZ8EoAtVOUfOLa0a-0',
+             highlights: ['Figma Design', 'Destination Search', 'Mobile-First', 'Next.js Dev'],
             },
           ].map((p, i) => (
             <motion.div
