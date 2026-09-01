@@ -58,7 +58,7 @@ export default function Home() {
               letterSpacing: '-0.03em',
               marginBottom: '0.25rem',
             }}>
-              Softwer
+              Software
             </motion.h1>
             <motion.h1 variants={fadeUp} style={{
               fontFamily: 'var(--font-display)',
