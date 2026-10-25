@@ -3,6 +3,22 @@ import PageWrapper from '../components/PageWrapper'
 
 const experiences = [
   {
+    company: 'Brain technosys Pvt. Ltd.',
+    role: 'design Intern',
+    type: 'On-site',
+    period: 'june 2026 – Aug 2026',
+    duration: '3 months',
+    color: '#60a5fa',
+    logo: '💡',
+    points: [
+      'Converted Figma UI designs into fully responsive, pixel-perfect frontend pages across 3 live client projects — Omni Text, Alis Group, and GGC',
+      'Built structured, responsive layouts using HTML5, CSS3, JavaScript, and Bootstrap, ensuring accurate design implementation and visual consistency.',
+      'Collaborated with designers and developers to translate wireframes and mockups into functional UI, improvingresponsiveness, usability, and cross-browser performance.',
+    ],
+    skills: ['HTML5, CSS3, JavaScript, Bootstrap, Figma', 'Responsive Design', 'UI Implementation'],
+  },
+  
+  {
     company: 'Campaigning Source Pvt. Ltd.',
     role: 'Design & Development Intern',
     type: 'Remote',
